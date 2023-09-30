@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GPAmate</title>
+  </head>
+  <body>
+    <div id="app">
+      <div
+        class="sticky h-14 inset-x-0 top-0 z-30 w-full border-b border-gray-200 bg-white/75 backdrop:blur-lg transition-all"
+      >
+        <div class="max-width-wrapper">
+          <div
+            class="flex h-14 items-center justify-between border-b border-zinc-200"
+          >
+            <a href="/" class="flex z-40 font-semibold"><span>GPAmate</span></a>
+
+            <!-- Mobile nav start -->
+            <div class="sm:hidden flex items-center">
+              <!-- mobile nav button -->
+              <button class="outline-none mobile-menu-button">
+                <svg
+                  class="w-5 h-5 text-zinc-700 relative z-50"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+              </button>
+
+              <!-- mobile nav menu -->
+              <div class="fixed inset-0 z-0 w-full hidden mobile-menu">
+                <ul
+                  class="absolute bg-white border-b border-zinc-200 shadow-xl grid w-full gap-3 px-10 pt-20 pb-8"
+                >
+                  <li>
+                    <a
+                      class="flex items-center w-full font-semibold text-green-600"
+                      href="/"
+                      >GitHub</a
+                    >
+                  </li>
+                  <li class="my-3 h-px w-full bg-gray-300" />
+                  <li>
+                    <a
+                      class="flex items-center w-full font-semibold text-green-600"
+                      href="/"
+                      >GitHub</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- Mobile nav end -->
+
+            <div class="hidden items-center space-x-4 sm:flex">
+              <a href="http://" target="_blank" rel="noopener noreferrer"
+                >GitHub</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

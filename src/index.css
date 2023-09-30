@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .max-width-wrapper {
+    @apply mx-auto w-full max-w-screen-xl px-2.5 md:px-20;
+  }
+}
