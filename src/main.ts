@@ -26,7 +26,6 @@ const initApp = (): void => {
   ) as HTMLFormElement;
   courseEntryForm.addEventListener("submit", (event: SubmitEvent) => {
     event.preventDefault();
-    console.log("entered");
 
     const nameInput = document.getElementById("name-input") as HTMLInputElement;
     const name: string = nameInput.value.trim();
@@ -53,6 +52,7 @@ const initApp = (): void => {
     );
 
     courseList.addItem(newItem);
+    nameInput.value = "";
     template.render(courseList);
   });
 
