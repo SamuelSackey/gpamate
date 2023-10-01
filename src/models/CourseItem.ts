@@ -19,7 +19,7 @@ export default class CourseItem implements Item {
 
   constructor(
     public id: string,
-    public name: string = "Course",
+    public name: string,
     public credits: string,
     public grade: string
   ) {}
