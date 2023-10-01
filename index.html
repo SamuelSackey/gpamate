@@ -74,8 +74,9 @@
       class="max-width-wrapper my-3 flex flex-col gap-6 items-center justify-center"
     >
       <!-- input area -->
-      <section
+      <form
         class="mx-auto w-full max-w-screen-sm flex items-center gap-2 overflow-hidden rounded-lg border border-gray-200 bg-white p-3 shadow-md backdrop-blur"
+        id="entry-form"
       >
         <!-- course input start -->
         <div class="w-full">
@@ -143,7 +144,8 @@
           <div class="relative">
             <select
               class="block appearance-none w-full min-w-max border text-gray-700 py-3 px-4 pr-8 rounded-lg focus:outline-none focus:border-gray-400"
-              id="grid-state"
+              name="grade-input"
+              id="grade-input"
             >
               <option value="A">A</option>
               <option value="B">B+</option>
@@ -188,7 +190,7 @@
             <path d="M4 12H20M12 4V20" />
           </svg>
         </button>
-      </section>
+      </form>
       <!-- input area end -->
 
       <section
@@ -196,7 +198,9 @@
       >
         <div class="w-full flex flex-col items-center">
           <h3 class="text-xs">GPA</h3>
-          <h1 class="text-3xl sm:text-4xl font-semibold">3.98</h1>
+          <h1 id="gpaDisplay" class="text-3xl sm:text-4xl font-semibold">
+            3.98
+          </h1>
         </div>
 
         <div class="h-full mb-2 overflow-y-auto rounded-lg">
@@ -208,13 +212,34 @@
                   <span class="hidden sm:table-cell">Credits</span>
                   <span class="sm:hidden">Cr</span>
                 </th>
-                <th class="th-custom rounded-tr-lg">
-                  <span class="hidden sm:table-cell">Grades</span>
+                <th class="th-custom">
+                  <span class="hidden sm:table-cell">Grade</span>
                   <span class="sm:hidden">Gr</span>
+                </th>
+                <th class="bg-gray-200 sm:bg-white">
+                  <button
+                    class="w-full sm:rounded-lg p-1 sm:p-2 flex items-center justify-center text-gray-700 bg-gray-200 focus:outline-none hover:opacity-80"
+                    id="clear-btn"
+                  >
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="w-5 h-5 text-gray-500"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M12 10V17M8 10V17M19 9H22M19 14H22M19 19H21M16 6V16.2C16 17.8802 16 18.7202 15.673 19.362C15.3854 19.9265 14.9265 20.3854 14.362 20.673C13.7202 21 12.8802 21 11.2 21H8.8C7.11984 21 6.27976 21 5.63803 20.673C5.07354 20.3854 4.6146 19.9265 4.32698 19.362C4 18.7202 4 17.8802 4 16.2V6M2 6H18M14 6L13.7294 5.18807C13.4671 4.40125 13.3359 4.00784 13.0927 3.71698C12.8779 3.46013 12.6021 3.26132 12.2905 3.13878C11.9376 3 11.523 3 10.6936 3H9.30643C8.47705 3 8.06236 3 7.70951 3.13878C7.39792 3.26132 7.12208 3.46013 6.90729 3.71698C6.66405 4.00784 6.53292 4.40125 6.27064 5.18807L6 6"
+                      />
+                    </svg>
+                  </button>
                 </th>
               </tr>
             </thead>
-            <tbody class="bg-white divide-y divide-gray-200">
+            <tbody id="courseList" class="bg-white divide-y divide-gray-200">
               <tr>
                 <td class="td-custom">Frodo Baggins</td>
                 <td class="td-custom text-center">3</td>
