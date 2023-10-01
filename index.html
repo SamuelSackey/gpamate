@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/gpamate/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GPAmate</title>
+    <script type="module" crossorigin src="/gpamate/assets/index-b36ccab5.js"></script>
+    <link rel="stylesheet" href="/gpamate/assets/index-f88e557c.css">
+  </head>
+  <body class="min-h-screen font-sans antialiased grainy">
+    <!-- Header start -->
+    <nav
+      class="sticky h-14 inset-x-0 top-0 z-30 w-full border-b border-gray-200 bg-white/75 backdrop:blur-lg transition-all"
+    >
+      <div class="max-width-wrapper">
+        <div
+          class="flex h-14 items-center justify-between border-b border-zinc-200"
+        >
+          <a href="/" class="flex z-40 font-semibold"
+            >GPA<span class="font-normal text-gray-500">mate</span></a
+          >
+
+          <!-- Mobile nav start -->
+          <div class="sm:hidden flex items-center">
+            <!-- mobile nav button -->
+            <button class="outline-none mobile-menu-button">
+              <svg
+                class="w-5 h-5 text-zinc-700 relative z-50"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path d="M4 6h16M4 12h16M4 18h16"></path>
+              </svg>
+            </button>
+
+            <!-- mobile nav menu -->
+            <div class="fixed inset-0 z-0 w-full hidden mobile-menu">
+              <ul
+                class="absolute bg-white border-b border-zinc-200 shadow-xl grid w-full gap-3 px-10 pt-20 pb-8"
+              >
+                <li>
+                  <a
+                    class="flex items-center w-full"
+                    href="https://samuelsackey.github.io/"
+                    target="_blank"
+                    >Samuel Sackey</a
+                  >
+                </li>
+                <li class="my-3 h-px w-full bg-gray-300" />
+                <li>
+                  <a
+                    class="flex items-center w-full"
+                    href="https://github.com/SamuelSackey/gpamate"
+                    target="_blank"
+                    >GitHub</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- Mobile nav end -->
+
+          <div class="hidden items-center space-x-4 sm:flex">
+            <a href="https://github.com/SamuelSackey/gpamate" target="_blank"
+              >GitHub</a
+            >
+            <a
+              class="flex gap-1 items-center w-full bg-gray-200 px-4 py-1.5 rounded-lg shadow-md"
+              href="https://samuelsackey.github.io/"
+              target="_blank"
+            >
+              <span class="text-xs">Samuel Sackey</span>
+              <img
+                src="https://avatars.githubusercontent.com/u/86845649"
+                alt="Samuel Sackey"
+                class="w-8 aspect-auto rounded-full border border-gray-500"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header end -->
+
+    <main
+      class="max-width-wrapper my-3 flex flex-col gap-6 items-center justify-center"
+    >
+      <!-- input area -->
+      <form
+        class="mx-auto w-full max-w-screen-sm flex items-center gap-2 overflow-hidden rounded-lg border border-gray-200 bg-white p-3 shadow-md backdrop-blur"
+        id="entry-form"
+      >
+        <!-- course input start -->
+        <div class="w-full">
+          <div
+            class="text-[11px] leading-none bg-white ml-2 w-fit relative z-10 -mb-1.5 text-gray-500"
+          >
+            Course <span class="hidden sm:inline">(Optional)</span>
+          </div>
+
+          <input
+            type="text"
+            name="name-input"
+            id="name-input"
+            placeholder="Course (Optional)"
+            class="w-full py-3 px-4 rounded-lg outline-none border focus:border-gray-400"
+          />
+        </div>
+        <!-- course input end -->
+
+        <!-- credits input start -->
+        <div>
+          <div
+            class="text-[11px] leading-none bg-white ml-2 w-fit relative z-10 -mb-1.5 text-gray-500"
+          >
+            Credits
+          </div>
+
+          <div class="relative">
+            <select
+              class="block appearance-none w-full min-w-max border text-gray-700 py-3 px-4 pr-8 rounded-lg focus:outline-none focus:border-gray-400"
+              id="credits-input"
+              name="credits-input"
+            >
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3" selected>3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+            </select>
+            <div
+              class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
+            >
+              <svg
+                class="fill-current h-4 w-4"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <!-- credits input end -->
+
+        <!-- grade input starts -->
+        <div>
+          <div
+            class="text-[11px] leading-none bg-white ml-2 w-fit relative z-10 -mb-1.5 text-gray-500"
+          >
+            Grade
+          </div>
+          <div class="relative">
+            <select
+              class="block appearance-none w-full min-w-max border text-gray-700 py-3 px-4 pr-8 rounded-lg focus:outline-none focus:border-gray-400"
+              name="grade-input"
+              id="grade-input"
+            >
+              <option value="A">A</option>
+              <option value="B+">B+</option>
+              <option value="B">B</option>
+              <option value="C+">C+</option>
+              <option value="C">C</option>
+              <option value="D+">D+</option>
+              <option value="D">D</option>
+              <option value="E">E</option>
+              <option value="F">F</option>
+            </select>
+            <div
+              class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
+            >
+              <svg
+                class="fill-current h-4 w-4"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- add button -->
+        <button
+          class="h-full py-3.5 px-2 rounded-lg flex items-center justify-center border border-gray-300 text-gray-700 bg-gray-200 focus:outline-none hover:opacity-80 self-end"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-5 h-5 text-gray-500"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+          >
+            <path d="M4 12H20M12 4V20" />
+          </svg>
+        </button>
+      </form>
+      <!-- input area end -->
+
+      <section
+        class="mx-auto w-full max-w-screen-sm h-[70vh] flex flex-col gap-2 overflow-hidden rounded-lg border border-gray-200 bg-white p-3 shadow-md backdrop-blur"
+      >
+        <div class="w-full flex flex-col items-center">
+          <h3 class="text-xs">GPA</h3>
+          <h1 id="gpaDisplay" class="text-3xl sm:text-4xl font-semibold">
+            3.98
+          </h1>
+        </div>
+
+        <div class="h-full mb-2 overflow-y-scroll rounded-lg scrollable">
+          <table
+            class="min-w-full divide-y divide-gray-200 table-fixed relative"
+          >
+            <thead class="bg-gray-50 sti sticky top-0">
+              <tr>
+                <th class="th-custom w-full text-left">Course</th>
+                <th class="th-custom">
+                  <span class="hidden sm:table-cell">Credits</span>
+                  <span class="sm:hidden">Cr</span>
+                </th>
+                <th class="th-custom">
+                  <span class="hidden sm:table-cell">Grade</span>
+                  <span class="sm:hidden">Gr</span>
+                </th>
+                <th class="bg-red-500 rounded-tr-lg">
+                  <button
+                    class="w-full sm:rounded-lg p-1 sm:p-2 flex items-center justify-center text-gray-700 focus:outline-none hover:opacity-80"
+                    id="clear-btn"
+                  >
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="w-5 h-5 text-white"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M12 10V17M8 10V17M19 9H22M19 14H22M19 19H21M16 6V16.2C16 17.8802 16 18.7202 15.673 19.362C15.3854 19.9265 14.9265 20.3854 14.362 20.673C13.7202 21 12.8802 21 11.2 21H8.8C7.11984 21 6.27976 21 5.63803 20.673C5.07354 20.3854 4.6146 19.9265 4.32698 19.362C4 18.7202 4 17.8802 4 16.2V6M2 6H18M14 6L13.7294 5.18807C13.4671 4.40125 13.3359 4.00784 13.0927 3.71698C12.8779 3.46013 12.6021 3.26132 12.2905 3.13878C11.9376 3 11.523 3 10.6936 3H9.30643C8.47705 3 8.06236 3 7.70951 3.13878C7.39792 3.26132 7.12208 3.46013 6.90729 3.71698C6.66405 4.00784 6.53292 4.40125 6.27064 5.18807L6 6"
+                      />
+                    </svg>
+                  </button>
+                </th>
+              </tr>
+            </thead>
+            <tbody id="courseList" class="bg-white divide-y divide-gray-200">
+              <tr>
+                <td class="td-custom">Computer Science</td>
+                <td class="td-custom text-center">3</td>
+                <td class="td-custom text-center">B+</td>
+                <td class="bg-gray-200 border border-gray-300 hover:opacity-80">
+                  <button
+                    class="w-full p-1 min-[320px]:p-2 flex items-center justify-center text-gray-700 bg-gray-200 focus:outline-none"
+                  >
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="w-5 h-5 text-gray-500"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path d="M6 6L18 18M18 6L6 18" />
+                    </svg>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+    
+  </body>
+</html>
