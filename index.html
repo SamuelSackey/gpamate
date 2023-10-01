@@ -82,7 +82,7 @@
           <div
             class="text-[11px] leading-none bg-white ml-2 w-fit relative z-10 -mb-1.5 text-gray-500"
           >
-            Course (Optional)
+            Course <span class="hidden sm:inline">(Optional)</span>
           </div>
 
           <input
@@ -170,6 +170,24 @@
             </div>
           </div>
         </div>
+
+        <!-- add button -->
+        <button
+          class="h-full py-3.5 px-2 rounded-lg flex items-center justify-center border border-gray-300 text-gray-700 bg-gray-200 focus:outline-none hover:opacity-80 self-end"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-5 h-5 text-gray-500"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+          >
+            <path d="M4 12H20M12 4V20" />
+          </svg>
+        </button>
       </section>
       <!-- input area end -->
 
@@ -181,7 +199,7 @@
           <h1 class="text-3xl sm:text-4xl font-semibold">3.98</h1>
         </div>
 
-        <div class="h-full mb-2 overflow-y-auto">
+        <div class="h-full mb-2 overflow-y-auto rounded-lg">
           <table class="min-w-full divide-y divide-gray-200 table-fixed">
             <thead class="bg-gray-200">
               <tr>
@@ -190,11 +208,10 @@
                   <span class="hidden sm:table-cell">Credits</span>
                   <span class="sm:hidden">Cr</span>
                 </th>
-                <th class="th-custom">
+                <th class="th-custom rounded-tr-lg">
                   <span class="hidden sm:table-cell">Grades</span>
                   <span class="sm:hidden">Gr</span>
                 </th>
-                <th class="bg-gray-200"></th>
               </tr>
             </thead>
             <tbody class="bg-white divide-y divide-gray-200">
@@ -202,13 +219,47 @@
                 <td class="td-custom">Frodo Baggins</td>
                 <td class="td-custom text-center">3</td>
                 <td class="td-custom text-center">B+</td>
-                <td class="bg-gray-200">XXX</td>
+                <td class="bg-gray-200 border border-gray-300 hover:opacity-80">
+                  <button
+                    class="w-full p-1 sm:p-2 flex items-center justify-center text-gray-700 bg-gray-200 focus:outline-none"
+                  >
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="w-5 h-5 text-gray-500"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path d="M6 6L18 18M18 6L6 18" />
+                    </svg>
+                  </button>
+                </td>
               </tr>
               <tr>
-                <td class="td-custom">Frodo Baggins edfefwe wedfwedwe</td>
+                <td class="td-custom">Frodo Baggins</td>
                 <td class="td-custom text-center">3</td>
                 <td class="td-custom text-center">B+</td>
-                <td class="">XXX</td>
+                <td class="bg-gray-200 border border-gray-300 hover:opacity-80">
+                  <button
+                    class="w-full p-1 sm:p-2 flex items-center justify-center text-gray-700 bg-gray-200 focus:outline-none"
+                  >
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="w-5 h-5 text-gray-500"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path d="M6 6L18 18M18 6L6 18" />
+                    </svg>
+                  </button>
+                </td>
               </tr>
             </tbody>
           </table>
