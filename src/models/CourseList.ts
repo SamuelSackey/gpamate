@@ -53,12 +53,13 @@ export default class CourseList implements List {
   calculate(): void {
     let totalPoints: number = 0;
     let totalCredits: number = 0;
+
     this.list.forEach((item) => {
       totalCredits += parseInt(item.credits);
       totalPoints += item.points;
     });
 
-    this._gpa = totalPoints / totalCredits;
+    this._gpa = totalCredits ? totalPoints / totalCredits : 0;
   }
 
   clearList(): void {

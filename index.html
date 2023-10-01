@@ -15,7 +15,9 @@
         <div
           class="flex h-14 items-center justify-between border-b border-zinc-200"
         >
-          <a href="/" class="flex z-40 font-semibold"><span>GPAmate</span></a>
+          <a href="/" class="flex z-40 font-semibold"
+            >GPA<span class="font-normal text-gray-500">mate</span></a
+          >
 
           <!-- Mobile nav start -->
           <div class="sm:hidden flex items-center">
@@ -41,16 +43,18 @@
               >
                 <li>
                   <a
-                    class="flex items-center w-full font-semibold text-green-600"
-                    href="/"
-                    >GitHub</a
+                    class="flex items-center w-full"
+                    href="https://samuelsackey.github.io/"
+                    target="_blank"
+                    >Samuel Sackey</a
                   >
                 </li>
                 <li class="my-3 h-px w-full bg-gray-300" />
                 <li>
                   <a
-                    class="flex items-center w-full font-semibold text-green-600"
-                    href="/"
+                    class="flex items-center w-full"
+                    href="https://github.com/SamuelSackey/gpamate"
+                    target="_blank"
                     >GitHub</a
                   >
                 </li>
@@ -60,9 +64,21 @@
           <!-- Mobile nav end -->
 
           <div class="hidden items-center space-x-4 sm:flex">
-            <a href="http://" target="_blank" rel="noopener noreferrer"
+            <a href="https://github.com/SamuelSackey/gpamate" target="_blank"
               >GitHub</a
             >
+            <a
+              class="flex gap-1 items-center w-full bg-gray-200 px-4 py-1.5 rounded-lg shadow-md"
+              href="https://samuelsackey.github.io/"
+              target="_blank"
+            >
+              <span class="text-xs">Samuel Sackey</span>
+              <img
+                src="https://avatars.githubusercontent.com/u/86845649"
+                alt="Samuel Sackey"
+                class="w-8 aspect-auto rounded-full border border-gray-500"
+              />
+            </a>
           </div>
         </div>
       </div>
@@ -207,7 +223,7 @@
           <table
             class="min-w-full divide-y divide-gray-200 table-fixed relative"
           >
-            <thead class="bg-gray-200 sti sticky top-0">
+            <thead class="bg-gray-50 sti sticky top-0">
               <tr>
                 <th class="th-custom w-full text-left">Course</th>
                 <th class="th-custom">
@@ -218,16 +234,16 @@
                   <span class="hidden sm:table-cell">Grade</span>
                   <span class="sm:hidden">Gr</span>
                 </th>
-                <th class="bg-gray-200 sm:bg-white">
+                <th class="bg-red-500 rounded-tr-lg">
                   <button
-                    class="w-full sm:rounded-lg p-1 sm:p-2 flex items-center justify-center text-gray-700 bg-gray-200 focus:outline-none hover:opacity-80"
+                    class="w-full sm:rounded-lg p-1 sm:p-2 flex items-center justify-center text-gray-700 focus:outline-none hover:opacity-80"
                     id="clear-btn"
                   >
                     <svg
                       viewBox="0 0 24 24"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
-                      class="w-5 h-5 text-gray-500"
+                      class="w-5 h-5 text-white"
                       stroke="currentColor"
                       stroke-linecap="round"
                       stroke-linejoin="round"
@@ -248,7 +264,7 @@
                 <td class="td-custom text-center">B+</td>
                 <td class="bg-gray-200 border border-gray-300 hover:opacity-80">
                   <button
-                    class="w-full p-1 sm:p-2 flex items-center justify-center text-gray-700 bg-gray-200 focus:outline-none"
+                    class="w-full p-1 min-[320px]:p-2 flex items-center justify-center text-gray-700 bg-gray-200 focus:outline-none"
                   >
                     <svg
                       viewBox="0 0 24 24"

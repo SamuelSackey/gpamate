@@ -8,11 +8,11 @@
   }
 
   .th-custom {
-    @apply py-3 px-2 sm:px-6 text-xs font-medium tracking-wider text-gray-700 uppercase;
+    @apply py-3 px-2 min-[320px]:px-6 text-xs font-medium tracking-wider text-gray-700 uppercase;
   }
 
   .td-custom {
-    @apply py-4 px-2 sm:px-6 text-sm font-medium text-gray-900;
+    @apply py-4 px-2 min-[320px]:px-6 text-sm font-medium text-gray-900;
   }
 
   .scrollable::-webkit-scrollbar {

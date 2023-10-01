@@ -60,7 +60,7 @@ export default class ListTemplate implements DOMList {
         "button"
       ) as HTMLButtonElement;
       deleteButton.className =
-        "w-full p-1 sm:p-2 flex items-center justify-center text-gray-700 bg-gray-200 focus:outline-none";
+        "w-full p-1 min-[320px]:p-2 flex items-center justify-center text-gray-700 bg-gray-200 focus:outline-none";
       deleteButton.innerHTML = ` 
       <svg
       viewBox="0 0 24 24"
